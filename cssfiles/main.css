@@ -1,0 +1,423 @@
+/* div{
+    background-color: purple;
+    background-image: url("../43875-WhatsApp-Image-2022-08-25-at-9.49.48-AM.jpg");
+    background-repeat : no-repeat;/*repeat => default , repeat x , repeat y , no-repeat */
+/* background-attachment: scroll;/* scroll=>default , fixed*/
+/* background-position: center center ; /*left top , right center , 50px 10px , 50% 50% */
+/* background-size: auto;/* auto , cover , contain , 100px 200px , 50% 20% */
+/* padding : top right bottom left  ;  => ( px , %) don't allow negative value */
+/* margin : top right bottom left  ;  => ( px , %)  allow negative vallue
+   (auto)         */
+/* width : % ; width os element  */
+
+/* border-width: px; top right bottom left 
+    border-color: red ; top right ottom left 
+    border-style: (solid || dashed|| dotted ||groov || ....... ) ; top right bottom left  
+    border-radius: px ;
+    
+    outline-style: ;
+    outline-color: ;
+    outline-width: ;
+
+
+    Grouping 
+    .div1, 
+    .p,
+    ,div2{
+        شوية خصائص مشتركة بينهم 
+    }
+    */
+/* }*/
+
+
+
+
+
+/* 
+.parent div .title {
+    color: red;
+}
+div .title {
+    color: blue;
+}
+div p{
+    color : green;
+}
+.title{
+    color: green;
+}
+ */
+
+/*
+    01 
+    p{
+    background-color: brown;
+    max-width: 400px;
+    max-height: 50px;
+    width: fit-content;
+    overflow: hidden;
+    
+} 
+*/
+
+
+/* div{
+    border: solid rgb(40, 40, 215) ;
+    padding: 50px;
+}
+div p{
+    border: inherit;
+    padding: inherit;
+    background-color: #eee;
+}
+span {
+    cursor:all-scroll ;
+} */
+
+
+
+
+/* ================================================================================== */
+
+body {
+    margin: 0;
+    height: 3000px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #cccccc;
+}
+
+.flo {
+    padding: 10px 0px;
+    text-align: center;
+    background-color: #eee;
+    float: left;
+    /* width: 18.8%; */
+    width: calc((100% - 60px) /5);
+    max-height: 40px;
+    margin-left: 10px;
+    overflow-y: hidden;
+    transition-duration: 0.5s;
+    transition-property: all;
+    transition-delay: 0s;
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+    z-index: 200;
+    box-shadow: 4px 4px 4px 3px #9ec3c3f7;
+    border-radius: 20px;
+    transition-duration: -5s;
+}
+
+.flo:hover {
+    overflow: visible;
+    max-height: 80px;
+    display: block;
+}
+
+/* 
+6 sapces = 6%
+94% avalible 
+element = 94% /5 
+*/
+
+/*
+.ch,
+.chh,
+.chc{
+    width: 200px ;
+}
+.pos {
+    background-color: black;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    top: 50px
+}
+
+.ch {
+    top: 20px ;
+    background-color: rgb(255, 0, 38);
+    position: fixed;
+    top: 200px;
+    right: 60px;
+}
+.chh{
+    background-color: blue;
+    top: 200px;
+    right: 50px;
+    position: sticky;
+}
+.chc{
+    background-color: blueviolet;
+    position: absolute;
+    top: 20px;
+    right: 100px;
+}
+
+*/
+
+
+/* ===================================================================================================== */
+table {
+    z-index: 1;
+    width: 100%;
+    background-color: #eee;
+    border-spacing: 0px;
+    position: relative;
+    top: 20px;
+    margin-top: 50px;
+}
+
+table td {
+    padding: 10px;
+    border: 1px solid rgb(50, 50, 50);
+}
+
+table thead td {
+    background-color: rgb(81, 99, 99);
+    border-color: rgb(33, 35, 35);
+    text-align: center;
+    font-weight: bold;
+}
+
+a {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+}
+
+a:visited {
+    color: rgb(255, 0, 0);
+}
+
+::selection {
+    background-color: black;
+    color: darkgoldenrod;
+}
+
+.parent {
+    counter-increment: Calc-num;
+    margin-bottom: 20px;
+    overflow: hidden;
+    top: 10px;
+    margin-left: 50px;
+    z-index: 0;
+}
+
+.parent .child {
+    background-color: #404040;
+    width: 50px;
+    margin-right: 20px;
+    padding: 10px;
+    height: 55.5;
+    float: left;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+
+}
+
+.parent .childp {
+    color: white;
+    background-color: #404040;
+    padding: 10px;
+    width: 660px;
+    float: left;
+    position: relative;
+}
+
+.childp::after {
+    content: counter(Calc-num);
+    position: absolute;
+    width: 20px;
+    height: 20%;
+    right: -10px;
+    top: 50%;
+    margin-top: -10px;
+    background-color: black;
+    text-align: center;
+}
+
+.childp::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+    top: 50%;
+    margin-top: -16px;
+    left: -15px;
+    display: none;
+}
+
+.childp:hover::before {
+    display: block;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.pare2 {
+    position: relative;
+}
+
+.tra1,
+.tra2 {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: #404040;
+    border-radius: 50%;
+    transition-duration: 3s;
+    transition-delay: 0.5s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    box-shadow: 4px 4px 4px 3px #9ec3c3f7;
+}
+
+.tra1:hover {
+    margin-left: 200px;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    background-image: url("../css-assignment-5-8.png");
+}
+
+.tra2:hover {
+    margin-right: 200px;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+}
+
+.tra2 {
+    position: absolute;
+    right: 0px;
+}
+
+.tra1 {
+    position: absolute;
+}
+
+.basic-pro {
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+}
+
+.basic,
+.pro {
+    width: 200px;
+    height: 300px;
+    background-color: #eee;
+    float: left;
+    margin: 20px;
+    padding: 20px;
+}
+
+button {
+    background-color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    width: calc(100% - 20px);
+}
+
+.pro {
+    right: 5px;
+}
+
+.basic p,
+.pro p {
+    background-color: #03a9f4;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.free,
+.price {
+    width: 150px;
+    height: 150px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    line-height: 150px;
+}
+
+
+.ele {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: #ffffff;
+    float: left;
+    margin-left: 15px;
+    position: relative;
+    box-shadow: -5px -5px blueviolet, 5px 5px blue;
+}
+
+.ele::before {
+    content: counter(Calc-num);
+    position: absolute;
+    left: 40px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    top: -5px;
+    text-align: center;
+}
+
+.ele::after {
+    content: "Element";
+    position: absolute;
+    top: 40%;
+    left: 25%;
+}
+
+.ins {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 14px 62px;
+    border-bottom-right-radius: 14px 62px;
+    box-shadow: 0px 0px 16px 6px inset;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+}
+
+
+.nav {
+    width: 500px;
+    background-color: #03a9f4;
+    display: flex;
+    margin-top: 200px;
+}
+
+.nav div {
+    width: 25%;
+    background-color: #0a17d0;
+
+}
